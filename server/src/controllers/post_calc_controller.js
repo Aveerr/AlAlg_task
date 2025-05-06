@@ -8,7 +8,7 @@ module.exports = {
             const {n, calc_type} = req.body;
             switch (calc_type) {
                 case 'calc_factorial':
-                    let factorial = calc_factorial(n)
+                    let factorial = calc_factorial.calc(n)
 
                     console.log(`factorial calculated`)
                     res.send(factorial);
