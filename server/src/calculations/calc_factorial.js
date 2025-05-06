@@ -1,6 +1,10 @@
 module.exports = {
     calc: (n) => {
-        if (n < 0) return NaN
+        if (typeof n !== 'number' || !Number.isInteger(n)) 
+            throw new TypeError('Параметр n должен быть числом');
+
+        if (n < 0)
+            throw new RangeError('Факториал отрицательного числа не определен');
 
         let result = [1];
         for(let i = 2; i <= n; i++){
